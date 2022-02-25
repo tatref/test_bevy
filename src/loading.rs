@@ -36,6 +36,49 @@ pub struct AudioAssets {
 
 #[derive(AssetCollection)]
 pub struct TextureAssets {
-    #[asset(path = "textures/bevy.png")]
-    pub texture_bevy: Handle<Image>,
+    #[asset(texture_atlas(
+        tile_size_x = 16.,
+        tile_size_y = 16.,
+        columns = 20,
+        rows = 2,
+        padding_x = 0.,
+        padding_y = 0.
+    ))]
+    #[asset(path = "textures/IconPack 1.1/AllItems/MiscellaneousSource/MiscellaneousOutline.png")]
+    pub misc: Handle<TextureAtlas>,
+
+    #[asset(texture_atlas(
+        tile_size_x = 16.,
+        tile_size_y = 16.,
+        columns = 24,
+        rows = 16,
+        padding_x = 0.,
+        padding_y = 0.
+    ))]
+    #[asset(
+        path = "textures/heroic-creature-pack 2/HAS Creature Pack 1.2/Necromancer/NecromancerSpriteSheet.png"
+    )]
+    pub necromancer: Handle<TextureAtlas>,
+    #[asset(texture_atlas(
+        tile_size_x = 16.,
+        tile_size_y = 16.,
+        columns = 20,
+        rows = 16,
+        padding_x = 0.,
+        padding_y = 0.
+    ))]
+    #[asset(
+        path = "textures/heroic-creature-pack 2/HAS Creature Pack 1.2/Castle/CastleSpriteSheet.png"
+    )]
+    pub castle: Handle<TextureAtlas>,
+    #[asset(texture_atlas(
+        tile_size_x = 24.,
+        tile_size_y = 24.,
+        columns = 24,
+        rows = 10,
+        padding_x = 0.,
+        padding_y = 0.
+    ))]
+    #[asset(path = "textures/has-magic-book/HAS Magic Book 1.1/MagicSpellsAllSprites.png")]
+    pub magic: Handle<TextureAtlas>,
 }
